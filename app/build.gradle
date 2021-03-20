@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -42,7 +43,6 @@ android {
 dependencies {
     implementation project(':domain')
     implementation project(':data')
-//    implementation Deps.koin
     implementation Deps.koinViewModel
 
     implementation Deps.kotlin
@@ -53,8 +53,14 @@ dependencies {
     implementation Deps.activityKtx
     implementation Deps.fragmentKtx
     implementation Deps.lifeCycle
+    implementation Deps.navFragment
+    implementation Deps.navUi
     implementation Deps.glide
     implementation Deps.glideLegacy
+    implementation Deps.hawk
+    implementation Deps.anko
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt Deps.glideKapt
 
     // Retrofit

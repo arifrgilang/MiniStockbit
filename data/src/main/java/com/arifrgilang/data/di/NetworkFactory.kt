@@ -51,7 +51,6 @@ object NetworkFactory {
                     .build()
                     .create(CryptoCompareAPI::class.java)
 
-    private const val DATE_FORMAT = "yyyy-MM-dd'T'hh:mm:ssZ"
     private const val DEFAULT_CONNECT_TIME_OUT: Long = 30 * 1000
     private const val DEFAULT_READ_TIME_OUT: Long = 30 * 1000
     private const val DEFAULT_WRITE_TIME_OUT: Long = 30 * 1000

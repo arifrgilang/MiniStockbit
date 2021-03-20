@@ -24,8 +24,11 @@ object Versions {
     val activityKtx = "1.1.0"
     val fragmentKtx = "1.2.5"
     val lifecycle = "1.1.1"
+    val navVersion = "2.3.4"
 
     val koin = "2.2.2"
+    val hawk = "2.0.1"
+    val anko = "0.10.8"
 
     val swipeRefreshLayout = "1.1.0-rc01"
     val glide = "4.10.0"
@@ -57,8 +60,11 @@ object Deps {
     val lifeCycle = "android.arch.lifecycle:extensions:${Versions.lifecycle}"
 
     // Other
-//    val koin = "io.insert-koin:koin-android:${Versions.koin}"
     val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
+    val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navVersion}"
+    val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navVersion}"
+    val hawk = "com.orhanobut:hawk:${Versions.hawk}"
+    val anko = "org.jetbrains.anko:anko:${Versions.anko}"
 
     // Glide
     val glide = "com.github.bumptech.glide:glide:${Versions.glide}"

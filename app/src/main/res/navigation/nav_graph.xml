@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.arifrgilang.ministockbit.ui.login.LoginFragment"
+        android:label="Login to Mini Stockbit">
+        <action
+            android:id="@+id/action_loginFragment_to_watchlistFragment"
+            app:destination="@id/watchlistFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.arifrgilang.ministockbit.ui.watchlist.WatchlistFragment"
+        android:label="Watchlist"
+        tools:layout="@layout/fragment_watchlist">
+        <action
+            android:id="@+id/action_watchlistFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/watchlistFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/datafeedFragment"
+        android:name="com.arifrgilang.ministockbit.ui.datafeed.DatafeedFragment"
+        android:label="Datafeed"
+        tools:layout="@layout/fragment_datafeed">
+        <action
+            android:id="@+id/action_datafeedFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/datafeedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
