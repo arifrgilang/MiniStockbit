@@ -3,10 +3,12 @@
     package="com.arifrgilang.ministockbit">
 
     <application
+        android:name=".MSApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniStockbit">
         <activity android:name=".MainActivity">

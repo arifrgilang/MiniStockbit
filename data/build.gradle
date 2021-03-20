@@ -1,7 +1,6 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
 }
 
 android {
@@ -9,19 +8,26 @@ android {
     buildToolsVersion DefaultConfig.buildTools
 
     defaultConfig {
-        applicationId DefaultConfig.appId
         minSdkVersion DefaultConfig.minSdk
         targetSdkVersion DefaultConfig.targetSdk
-        versionCode Releases.versionCode
-        versionName Releases.versionName
 
         testInstrumentationRunner DefaultConfig.testRunner
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "BASE_URL", String.format("\"%s\"", baseUrl)
+            buildConfigField "String", "API_KEY", String.format("\"%s\"", APIKey)
+            buildConfigField "String", "BASE_URL_WEBSOCKET", String.format("\"%s\"", baseUrlWebSocket)
+        }
+        debug {
+            buildConfigField "String", "BASE_URL", String.format("\"%s\"", baseUrl)
+            buildConfigField "String", "API_KEY", String.format("\"%s\"", APIKey)
+            buildConfigField "String", "BASE_URL_WEBSOCKET", String.format("\"%s\"", baseUrlWebSocket)
         }
     }
 
@@ -31,31 +37,19 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
+}
 
-    buildFeatures {
-        dataBinding = true
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
 }
 
 dependencies {
     implementation project(':domain')
-    implementation project(':data')
 //    implementation Deps.koin
     implementation Deps.koinViewModel
-
-    implementation Deps.kotlin
-    implementation Deps.appCompat
-    implementation Deps.coreKtx
-    implementation Deps.constraintLayout
-    implementation Deps.material
-    implementation Deps.activityKtx
-    implementation Deps.fragmentKtx
-    implementation Deps.lifeCycle
-    implementation Deps.glide
-    implementation Deps.glideLegacy
-    kapt Deps.glideKapt
 
     // Retrofit
     implementation Deps.retrofit
@@ -63,16 +57,10 @@ dependencies {
     implementation Deps.retrofitGson
 
     // OkHttp
-    implementation (Deps.okHttp){
-        force = true
-    }
+    implementation Deps.okHttp
     implementation Deps.interceptor
 
     //RxJava Library
     implementation Deps.rxJava
     implementation Deps.rxAndroid
-
-    testImplementation Deps.junit
-    androidTestImplementation Deps.extJunit
-    androidTestImplementation Deps.espresso
 }

@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion DefaultConfig.compileSdk
+    buildToolsVersion DefaultConfig.buildTools
+
+    defaultConfig {
+        minSdkVersion DefaultConfig.minSdk
+        targetSdkVersion DefaultConfig.targetSdk
+
+        testInstrumentationRunner DefaultConfig.testRunner
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+//    implementation Deps.koin
+    implementation Deps.koinViewModel
+
+    //RxJava Library
+    implementation Deps.rxJava
+    implementation Deps.rxAndroid
+    implementation Deps.retrofitGson
+}
