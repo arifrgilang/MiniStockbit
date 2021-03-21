@@ -47,7 +47,7 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
 
     private fun onFormValidate(state: FormState) {
         validationHandler(state,
-            onInvalid = {toast("Email and Password is required")},
+            onInvalid = { toast("Email and Password is required") },
             onValid = { navigateToWatchlist() }
         )
     }
@@ -94,9 +94,4 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
         (activity as MainActivity).setMenuHidden(false)
         super.onDetach()
     }
-//    override fun onPause() {
-//        (activity as MainActivity).showBottomNavBar()
-//        (activity as MainActivity).setMenuHidden(false)
-//        super.onPause()
-//    }
 }

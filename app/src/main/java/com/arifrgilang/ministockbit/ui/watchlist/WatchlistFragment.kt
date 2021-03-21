@@ -17,8 +17,9 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class WatchlistFragment : BaseBindingFragment<FragmentWatchlistBinding>() {
     lateinit var rvAdapter: WatchlistRecyclerAdapter
-    override fun contentView(): Int = R.layout.fragment_watchlist
     private val viewModel by viewModel<WatchlistViewModel>()
+
+    override fun contentView(): Int = R.layout.fragment_watchlist
 
     override fun setupData(savedInstanceState: Bundle?) {}
 
@@ -26,6 +27,7 @@ class WatchlistFragment : BaseBindingFragment<FragmentWatchlistBinding>() {
         initRv()
         observeViewModel()
         viewModel.fetchData()
+
         binding.srWatchlist.onRefresh {
             viewModel.fetchData()
         }

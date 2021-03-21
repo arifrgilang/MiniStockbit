@@ -55,20 +55,28 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         invalidateOptionsMenu()
     }
 
+    private fun showLogoutDialog() {
+        LogoutDialogFragment(
+                object: LogoutDialogFragment.DialogCallback {
+                    override fun isAgree() { logout() }
+                }
+        ).show(supportFragmentManager, "Logout Dialog")
+    }
+
+    private fun logout() {
+        Hawk.delete(Constant.USER_TOKEN)
+        navHostFragment.findNavController().navigate(R.id.loginFragment, null)
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-        if (isMenuHidden) {
-            menu?.findItem(R.id.log_out)?.isVisible = false
-        }
+        if (isMenuHidden) menu?.findItem(R.id.log_out)?.isVisible = false
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.log_out -> {
-                Hawk.delete(Constant.USER_TOKEN)
-                navHostFragment.findNavController().navigate(R.id.loginFragment, null)
-            }
+            R.id.log_out -> showLogoutDialog()
         }
         return super.onOptionsItemSelected(item)
     }
