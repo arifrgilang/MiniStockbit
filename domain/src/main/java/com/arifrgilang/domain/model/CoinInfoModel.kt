@@ -4,33 +4,33 @@ import com.google.gson.annotations.SerializedName
 
 data class CoinInfoModel (
     @SerializedName("Algorithm")
-    val algorithm: String,
+    val algorithm: String?,
     @SerializedName("BlockNumber")
-    val blockNumber: Int,
+    val blockNumber: Int?,
     @SerializedName("BlockReward")
-    val blockReward: Double,
+    val blockReward: Double?,
     @SerializedName("BlockTime")
-    val blockTime: Int,
+    val blockTime: Double?,
     @SerializedName("DocumentType")
-    val documentType: String,
+    val documentType: String?,
     @SerializedName("FullName")
-    val fullName: String,
+    val fullName: String?,
     @SerializedName("Id")
-    val id: String,
+    val id: String?,
     @SerializedName("ImageUrl")
-    val imageUrl: String,
+    val imageUrl: String?,
     @SerializedName("Internal")
-    val internal: String,
+    val internal: String?,
     @SerializedName("Name")
-    val name: String,
+    val name: String?,
     @SerializedName("NetHashesPerSecond")
-    val netHashesPerSecond: Double,
+    val netHashesPerSecond: Double?,
     @SerializedName("ProofType")
-    val proofType: String,
+    val proofType: String?,
     @SerializedName("Rating")
-    val rating: RatingModel,
+    val rating: RatingModel?,
     @SerializedName("Type")
-    val type: Int,
+    val type: Int?,
     @SerializedName("Url")
-    val url: String
+    val url: String?
 )

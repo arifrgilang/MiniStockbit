@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class CryptoModel(
     @SerializedName("CoinInfo")
-    var coinInfo: CoinInfoModel,
+    var coinInfo: CoinInfoModel?,
     @SerializedName("DISPLAY")
-    val display: DisplayModel,
+    val display: DisplayModel?,
     @SerializedName("RAW")
-    val raw: RawModel
+    val raw: RawModel?
 )

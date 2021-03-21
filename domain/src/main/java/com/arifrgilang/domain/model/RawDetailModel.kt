@@ -4,91 +4,91 @@ import com.google.gson.annotations.SerializedName
 
 data class RawDetailModel(
     @SerializedName("CHANGE24HOUR")
-    val change24Hour: Double,
+    val change24Hour: Double?,
     @SerializedName("CHANGEDAY")
-    val changeDay: Double,
+    val changeDay: Double?,
     @SerializedName("CHANGEHOUR")
-    val changeHour: Double,
+    val changeHour: Double?,
     @SerializedName("CHANGEPCT24HOUR")
-    val changePCT24Hour: Double,
+    val changePCT24Hour: Double?,
     @SerializedName("CHANGEPCTDAY")
-    val changePCTDay: Double,
+    val changePCTDay: Double?,
     @SerializedName("CHANGEPCTHOUR")
-    val changePCTHour: Double,
+    val changePCTHour: Double?,
     @SerializedName("CONVERSIONSYMBOL")
-    val conversionSymbol: String,
+    val conversionSymbol: String?,
     @SerializedName("CONVERSIONTYPE")
-    val conversionType: String,
+    val conversionType: String?,
     @SerializedName("FLAGS")
-    val flags: String,
+    val flags: String?,
     @SerializedName("FROMSYMBOL")
-    val fromSymbol: String,
+    val fromSymbol: String?,
     @SerializedName("HIGH24HOUR")
-    val high24Hour: Double,
+    val high24Hour: Double?,
     @SerializedName("HIGHDAY")
-    val highDay: Double,
+    val highDay: Double?,
     @SerializedName("HIGHHOUR")
-    val highHour: Double,
+    val highHour: Double?,
     @SerializedName("IMAGEURL")
-    val imageUrl: String,
+    val imageUrl: String?,
     @SerializedName("LASTMARKET")
-    val lastMarket: String,
+    val lastMarket: String?,
     @SerializedName("LASTTRADEID")
-    val lastTradeId: String,
+    val lastTradeId: String?,
     @SerializedName("LASTUPDATE")
-    val lastUpdate: Double,
+    val lastUpdate: Double?,
     @SerializedName("LASTVOLUME")
-    val lastVolume: Double,
+    val lastVolume: Double?,
     @SerializedName("LASTVOLUMETO")
-    val lastVolumeTo: Double,
+    val lastVolumeTo: Double?,
     @SerializedName("LOW24HOUR")
-    val low24Hour: Double,
+    val low24Hour: Double?,
     @SerializedName("LOWDAY")
-    val lowDay: Double,
+    val lowDay: Double?,
     @SerializedName("LOWHOUR")
-    val lowHour: Double,
+    val lowHour: Double?,
     @SerializedName("MARKET")
-    val market: String,
+    val market: String?,
     @SerializedName("MEDIAN")
-    val median: Double,
+    val median: Double?,
     @SerializedName("MKTCAP")
-    val marketCap: Double,
+    val marketCap: Double?,
     @SerializedName("OPEN24HOUR")
-    val open24Hour: Double,
+    val open24Hour: Double?,
     @SerializedName("OPENDAY")
-    val openDay: Double,
+    val openDay: Double?,
     @SerializedName("OPENHOUR")
-    val openHour: Double,
+    val openHour: Double?,
     @SerializedName("PRICE")
-    val price: Double,
+    val price: Double?,
     @SerializedName("SUPPLY")
-    val supply: Double,
+    val supply: Double?,
     @SerializedName("TOPTIERVOLUME24HOUR")
-    val topTierVolume24Hour: Double,
+    val topTierVolume24Hour: Double?,
     @SerializedName("TOPTIERVOLUME24HOURTO")
-    val topTierVolume24HourTo: Double,
+    val topTierVolume24HourTo: Double?,
     @SerializedName("TOSYMBOL")
-    val toSymbol: String,
+    val toSymbol: String?,
     @SerializedName("TOTALTOPTIERVOLUME24H")
-    val totaltopTierVolume24H: Double,
+    val totalTopTierVolume24H: Double?,
     @SerializedName("TOTALtoPTIERVOLUME24Hto")
-    val totaltopTierVolume24HTo: Double,
+    val totalTopTierVolume24HTo: Double?,
     @SerializedName("TOTALVOLUME24H")
-    val totalVolume24H: Double,
+    val totalVolume24H: Double?,
     @SerializedName("TOTALVOLUME24HTO")
-    val totalVolume24HTo: Double,
+    val totalVolume24HTo: Double?,
     @SerializedName("TYPE")
-    val type: String,
+    val type: String?,
     @SerializedName("VOLUME24HOUR")
-    val volume24Hour: Double,
+    val volume24Hour: Double?,
     @SerializedName("VOLUME24HOURTO")
-    val volume24HourTo: Double,
+    val volume24HourTo: Double?,
     @SerializedName("VOLUMEDAY")
-    val volumeDay: Double,
+    val volumeDay: Double?,
     @SerializedName("VOLUMEDAYTO")
-    val volumeDayTo: Double,
+    val volumeDayTo: Double?,
     @SerializedName("VOLUMEHOUR")
-    val volumeHour: Double,
+    val volumeHour: Double?,
     @SerializedName("VOLUMEHOURTO")
-    val volumeHourTo: Double
+    val volumeHourTo: Double?
 )

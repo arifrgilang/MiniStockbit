@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="cryptocurrency"
+            type="com.arifrgilang.domain.model.CryptoModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_currency_acronym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{cryptocurrency.coinInfo.internal}"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_currency_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{cryptocurrency.coinInfo.fullName}"
+
+            android:layout_below="@id/tv_currency_acronym"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_currency_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`USD ` + cryptocurrency.raw.rawDetail.price}"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_currency_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tv_currency_price" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/tv_currency_name" />
+    </RelativeLayout>
+</layout>

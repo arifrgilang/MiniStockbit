@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class DisplayModel (
     @SerializedName("IDR")
-    val displayDetail: DisplayDetailModel
+    val displayDetail: DisplayDetailModel?
 )
