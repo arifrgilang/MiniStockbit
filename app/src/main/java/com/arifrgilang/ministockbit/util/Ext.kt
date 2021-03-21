@@ -37,15 +37,7 @@ fun formatPriceChangesPercentage(value: Double): String {
 }
 
 fun formatPrice(value: Double): String {
-    return DecimalFormat("##,##").format(value)
-}
-
-fun getSmallProgressDrawable(context: Context): CircularProgressDrawable {
-    return CircularProgressDrawable(context).apply {
-        strokeWidth = 4f
-        centerRadius = 24f
-        start()
-    }
+    return DecimalFormat("###,###").format(value)
 }
 
 fun validationHandler(

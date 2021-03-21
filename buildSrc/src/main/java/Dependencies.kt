@@ -29,6 +29,7 @@ object Versions {
     val koin = "2.2.2"
     val hawk = "2.0.1"
     val anko = "0.10.8"
+    val scarlet = "0.2.5-SNAPSHOT"
 
     val swipeRefreshLayout = "1.1.0-rc01"
     val glide = "4.10.0"
@@ -65,6 +66,13 @@ object Deps {
     val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navVersion}"
     val hawk = "com.orhanobut:hawk:${Versions.hawk}"
     val anko = "org.jetbrains.anko:anko:${Versions.anko}"
+
+    // Scarlet
+    val scarlet = "com.tinder.scarlet:scarlet:${Versions.scarlet}"
+    val scarletRx = "com.tinder.scarlet:stream-adapter-rxjava2:${Versions.scarlet}"
+    val scarletGson = "com.tinder.scarlet:message-adapter-gson:${Versions.scarlet}"
+    val scarletOkHttp = "com.tinder.scarlet:protocol-websocket-okhttp:${Versions.scarlet}"
+//    val scarletLifecycle = "com.tinder.scarlet:scarlet-lifecycle-android:${Versions.scarlet}"
 
     // Glide
     val glide = "com.github.bumptech.glide:glide:${Versions.glide}"

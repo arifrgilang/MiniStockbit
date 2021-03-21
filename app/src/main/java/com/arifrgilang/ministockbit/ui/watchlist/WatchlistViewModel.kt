@@ -13,7 +13,7 @@ import com.arifrgilang.domain.model.CryptoRequestParam
 import com.arifrgilang.domain.usecase.GetCryptoList
 
 class WatchlistViewModel(
-        private val getCryptoList: GetCryptoList
+    private val getCryptoList: GetCryptoList
 ) : ViewModel(){
     private val _response = MutableLiveData<List<CryptoModel>>()
     private val _uiState = MutableLiveData<UiState>()

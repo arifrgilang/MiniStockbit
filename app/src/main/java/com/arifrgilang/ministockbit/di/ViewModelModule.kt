@@ -1,5 +1,6 @@
 package com.arifrgilang.ministockbit.di
 
+import com.arifrgilang.ministockbit.ui.datafeed.DatafeedViewModel
 import com.arifrgilang.ministockbit.ui.login.LoginViewModel
 import com.arifrgilang.ministockbit.ui.watchlist.WatchlistRecyclerAdapter
 import com.arifrgilang.ministockbit.ui.watchlist.WatchlistViewModel
@@ -13,5 +14,9 @@ val viewModelModule = module {
 
     viewModel {
         WatchlistViewModel(get())
+    }
+
+    viewModel {
+        DatafeedViewModel(get())
     }
 }

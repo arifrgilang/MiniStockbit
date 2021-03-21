@@ -82,7 +82,6 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
         }
     }
 
-
     override fun onResume() {
         (activity as MainActivity).hideBottomNavBar()
         (activity as MainActivity).setMenuHidden(true)
