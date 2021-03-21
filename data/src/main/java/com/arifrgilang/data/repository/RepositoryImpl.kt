@@ -9,10 +9,8 @@ import com.arifrgilang.domain.model.CryptoModel
 import com.arifrgilang.domain.model.CryptoRequestParam
 import com.arifrgilang.domain.model.Subscribe
 import com.arifrgilang.domain.model.WebSocketResponse
-import com.tinder.scarlet.websocket.WebSocketEvent
 import io.reactivex.Flowable
 import io.reactivex.Single
-import io.reactivex.android.schedulers.AndroidSchedulers
 
 class RepositoryImpl(
     private val api: CryptoCompareAPI,
@@ -28,6 +26,4 @@ class RepositoryImpl(
         webSocket.subscribe(subscription)
         return webSocket.observeResponse()
     }
-
-
 }

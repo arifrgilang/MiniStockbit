@@ -32,22 +32,20 @@ android {
     }
 }
 
-//java {
-//    sourceCompatibility = JavaVersion.VERSION_1_7
-//    targetCompatibility = JavaVersion.VERSION_1_7
-//}
-
 dependencies {
-//    implementation Deps.koin
     implementation Deps.koinViewModel
     implementation Deps.scarlet
     implementation Deps.scarletGson
     implementation Deps.scarletOkHttp
     implementation Deps.scarletRx
-//    implementation Deps.scarletLifecycle
 
     //RxJava Library
     implementation Deps.rxJava
     implementation Deps.rxAndroid
     implementation Deps.retrofitGson
+
+    //Test
+    implementation Deps.mockk
+    implementation Deps.junit
+    implementation Deps.extJunit
 }

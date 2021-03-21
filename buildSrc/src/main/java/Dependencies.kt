@@ -43,6 +43,7 @@ object Versions {
     val rxJava = "2.2.10"
     val rxAndroid = "2.1.1"
 
+    val mockk = "1.10.0"
     val junit = "4.13"
     val extJunit = "1.1.2"
     val espresso = "3.3.0"
@@ -93,6 +94,7 @@ object Deps {
     val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
 
     // Test
+    val mockk = "io.mockk:mockk:${Versions.mockk}"
     val junit = "junit:junit:${Versions.junit}"
     val extJunit = "androidx.test.ext:junit:${Versions.extJunit}"
     val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"

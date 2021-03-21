@@ -48,7 +48,6 @@ dependencies {
     implementation Deps.scarletGson
     implementation Deps.scarletOkHttp
     implementation Deps.scarletRx
-//    implementation Deps.scarletLifecycle
 
     implementation Deps.kotlin
     implementation Deps.appCompat
